@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+h1 {
+  font-size: 2.5em;
+  align-items: center;
+  margin-left: 3.2em;
+  margin-bottom: 2em;
+  margin-top: 1.6em;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+
+.scoreTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#refresh {
+  margin-left: 1rem;
+  height: 2rem;
+  width: 5rem;
+  border: 1px solid;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+.scoreList {
+  border: 0.2em solid black;
+  border-radius: 2px;
+  width: 48%;
+  margin-top: 1em;
+}
+
+div ul li {
+  list-style: none;
+  padding-top: 1px;
+  margin: 0 10px;
+  height: 23px;
+  align-items: center;
+}
+
+.bakground {
+  background-color: rgb(201, 198, 198);
+}
+
+.addForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 50%;
+}
+
+.input {
+  height: 35px;
+  border: 2px solid black;
+  border-radius: 1px;
+  width: 70%;
+  padding-left: 1em;
+}
+
+#subBtn {
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+  font-size: medium;
+}
+
+#add {
+  width: 5rem;
+  height: 2rem;
+}
