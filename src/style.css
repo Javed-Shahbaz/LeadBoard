@@ -7,7 +7,7 @@
 
 h1 {
   font-size: 2.5em;
-  align-items: left;
+  align-items: center;
   margin-left: 3.2em;
   margin-bottom: 2em;
   margin-top: 1.6em;
@@ -52,7 +52,7 @@ h2 {
 }
 
 div ul li {
-  list-style:none;
+  list-style: none;
   padding-top: 1px;
   margin: 0 10px;
   height: 23px;
@@ -75,7 +75,7 @@ div ul li {
   border: 2px solid black;
   border-radius: 1px;
   width: 70%;
-  padding-left: 1em ;
+  padding-left: 1em;
 }
 
 #subBtn {

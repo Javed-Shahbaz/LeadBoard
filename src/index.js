@@ -37,5 +37,5 @@ scoreList.map((item) => {
   } else {
     lisItem.innerHTML += `<li>${item.name}:     <span>${item.score}</span></li>`;
   }
-  return ("");
+  return ('');
 });
