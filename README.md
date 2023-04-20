@@ -32,7 +32,7 @@ REQUIRED SECTIONS:
 
 # 📗 Table of Contents
 
-- [📖 ToDoList](#about-project)
+- [📖 LeadBoard](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
@@ -54,11 +54,11 @@ REQUIRED SECTIONS:
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [To-Do-List] <a name="about-project"></a>
+# 📖 [LeadBoard] <a name="about-project"></a>
 
 > Its a daily rountine list for users to write down their task.
 
-**[ToDoList]** is a project for microvesre.
+**[LeadBoard]** is a project for microvesre.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -95,7 +95,8 @@ REQUIRED SECTIONS:
 - **[HTML]**
 - **[JavaScript]**
 - **[WebPack]**
-- **[Github flow]**
+- **[Githubflow]**
+- **[GoogleApi]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -104,7 +105,7 @@ REQUIRED SECTIONS:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
- [https://javed-shahbaz.github.io/ToDoProject](https://javed-shahbaz.github.io/ToDoProject/)
+ [https://javed-shahbaz.github.io/LeadBoard](https://javed-shahbaz.github.io/LeadBoard/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -129,7 +130,7 @@ Example command:
 
 ### Setup
 
-Clone this repository to your desired folder:https://javed-shahbaz.github.io/ToDoProject.git
+Clone this repository to your desired folder:https://javed-shahbaz.github.io/LeadBoard.git
 
 <!--
 Example commands:
@@ -179,7 +180,7 @@ Example command:
 
 ### Deployment
 
-https://javed-shahbaz.github.io/ToDoProject/
+https://javed-shahbaz.github.io/LeadBoard/
 
 <!--
 Example:
@@ -218,7 +219,7 @@ Example:
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-https://github.com/Javed-Shahbaz/ToDoProject/issues
+https://github.com/Javed-Shahbaz/LeadBoard/issues
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
