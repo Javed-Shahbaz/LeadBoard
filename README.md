@@ -71,7 +71,7 @@
 - **[HTML]**
 - **[JavaScript]**
 - **[WebPack]**
-- **[Githubflow]**
+- **[Gitflow]**
 - **[GoogleApi]**
 
 
