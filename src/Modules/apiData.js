@@ -1,27 +1,27 @@
 class scoreBoard {
-  constructor(nam, scor) {
+  constructor(nam, score) {
     this.nam = nam;
-    this.scor = scor;
+    this.score = score;
   }
 
   //  stores data in array
   scores = [];
 
-  Api = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/yMzG8blKxFRkRArKy24E/scores/';
+  apiLink = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/2mThWAsbxwLTvxawmcEU/scores';
 
   scorList = () => {
     const list = document.getElementById('List');
-    list.innerHTML = this.scoresData.map((item) => `
+    list.innerHTML = this.scores.map((item) => `
     <li>${item.nam} : ${item.score}</li>`).join('');
   };
 
   // fetching data from API
   fScor = async () => {
     try {
-      const sData = await fetch(this.Api);
+      const sData = await fetch(this.apiLink);
       const response = await sData.json();
-      this.scoresData = [];
-      response.result.map((item) => this.scoresData.push(item));
+      this.scores = [];
+      response.result.map((item) => this.scores.push(item));
       return this.scorList();
     } catch (error) { return error; }
   };
@@ -29,7 +29,7 @@ class scoreBoard {
   // Add a new Score
   newScor = async ({ nam, score }) => {
     try {
-      const confg = {
+      const config = {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -38,9 +38,9 @@ class scoreBoard {
         body: JSON.stringify({ nam, score }),
       };
 
-      const sData = await fetch(this.Api, confg);
+      const sData = await fetch(this.apiLink, config);
       const respons = await sData.json();
-      this.scoresData.push(respons);
+      this.scores.push(respons);
       return this.fScor();
     } catch (error) { return error; }
   };

@@ -8,10 +8,10 @@ adScore.addEventListener('submit', (e) => {
   e.preventDefault();
   const player = adScore.name.value;
   const score = adScore.score.value;
-  currentScore.newScor({ player, score });
+  scor.newScor({ player, score });
   adScore.reset();
 });
 
 const refBtn = document.getElementById('refresh');
-refBtn.addEventListener('click', currentScore.fScor);
-document.addEventListener('DOMContentLoaded', currentScore.scorList);
+refBtn.addEventListener('click', scor.fScor);
+document.addEventListener('DOMContentLoaded', scor.scorList);
