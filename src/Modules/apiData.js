@@ -27,7 +27,7 @@ class scoreBoard {
   };
 
   // Add a new Score
-  addNewScore = async ({ nam, score }) => {
+  newScor = async ({ nam, score }) => {
     try {
       const confg = {
         method: 'POST',
