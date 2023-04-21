@@ -1,5 +1,5 @@
 import './style.css';
-import scoreBoard from './modules/apiData.js';
+import scoreBoard from './Modules/apiData.js';
 
 const scor = new scoreBoard();
 const adScore = document.querySelector('.addForm');
