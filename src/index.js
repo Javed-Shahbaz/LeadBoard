@@ -1,13 +1,17 @@
 import './style.css';
+import scoreBoard from './modules/apiData.js';
 
-const lisItem = document.getElementById('List');
+const scor = new scoreBoard();
+const adScore = document.querySelector('.addForm');
 
-scoreList.map((item) => {
-  if (item.id % 2 === 0) {
-    lisItem.innerHTML += `
-    <li class= 'bakground'>${item.name}:     <span>${item.score}</span></li>`;
-  } else {
-    lisItem.innerHTML += `<li>${item.name}:     <span>${item.score}</span></li>`;
-  }
-  return ('');
+adScore.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const player = adScore.name.value;
+  const score = adScore.score.value;
+  currentScore.newScore({ player, score });
+  adScore.reset();
 });
+
+const refBtn = document.getElementById('refresh');
+refBtn.addEventListener('click', currentScore.fetchScores);
+document.addEventListener('DOMContentLoaded', currentScore.showScores);
