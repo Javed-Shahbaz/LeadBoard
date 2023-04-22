@@ -60,7 +60,7 @@ div ul li {
 }
 
 div ul li:nth-child(even) {
-  background-color : rgb(188, 184, 184);
+  background-color: rgb(188, 184, 184);
 }
 
 .bakground {
