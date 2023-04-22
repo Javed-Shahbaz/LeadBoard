@@ -3,22 +3,15 @@ class scoreBoard {
     this.user = user;
     this.score = score;
   }
-
-  //  stores data in array
   scorArray = [];
-
-  // API URL
   apiURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/2mThWAsbxwLTvxawmcEU/scores';
-
-  // Show Scores
   scores = () => {
     const sList = document.getElementById('List');
     sList.innerHTML = this.scorArray.map((item) => `
     <li>${item.user} : ${item.score}</li>`).join('');
   };
 
-  // fetching data from API
-  fetchScores = async () => {
+  fScor = async () => {
     try {
       const data = await fetch(this.apiURL);
       const response = await data.json();
@@ -43,7 +36,7 @@ class scoreBoard {
       const data = await fetch(this.apiURL, config);
       const response = await data.json();
       this.scorArray.push(response);
-      return this.fetchScores();
+      return this.fScor();
     } catch (error) { return error; }
   };
 }

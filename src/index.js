@@ -13,5 +13,5 @@ addScore.addEventListener('submit', (e) => {
 });
 
 const refreshBtn = document.getElementById('refresh');
-refreshBtn.addEventListener('click', pScore.fetchScores);
+refreshBtn.addEventListener('click', pScore.fScor);
 document.addEventListener('DOMContentLoaded', pScore.showScores);
