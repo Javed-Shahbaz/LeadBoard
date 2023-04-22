@@ -7,23 +7,23 @@
 </head>
 <body>
     <h1>Leaderboard</h1>
-    <div class="main">
-        <div class="score">
-            <div class="scoreTitle">
+    <div class="container">
+        <div class="recentScores">
+            <div class="recentScoreTitle">
                 <h2>Recent Scores</h2>
                 <button id="refresh" type="button">Refresh</button>
             </div>
-            <div class="scoreList">
-                <ul id="List">
+            <div class="recentScoreList">
+                <ul id="list">
                  </ul>
             </div>
         </div>
         <div class="addScore">
-            <form action="submit" class="addForm">
+            <form action="submit" class="add-form">
                 <h2 id="addScore">Add your score</h2>
                 <input class="input name" type="text" name="name" placeholder="Your name" required>
                 <input class="input score" type="text" name="score" placeholder="Your score" required>
-                <input id="add" type="submit" value="Submit">                
+                <input id="submit" type="submit" value="Submit">                
             </form>
         </div>
     </div>

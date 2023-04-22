@@ -1,19 +1,19 @@
-class scoreBoard {
+class GameScore {
   constructor(user, score) {
     this.user = user;
     this.score = score;
   }
 
   //  stores data in array
-  scorArray = [];
+  scoresData = [];
 
   // API URL
-  apiURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/2mThWAsbxwLTvxawmcEU/scores';
+  apiURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/yMzG8blKxFRkRArKy24E/scores/';
 
   // Show Scores
-  scores = () => {
-    const sList = document.getElementById('List');
-    sList.innerHTML = this.scorArray.map((item) => `
+  showScores = () => {
+    const scoresList = document.getElementById('list');
+    scoresList.innerHTML = this.scoresData.map((item) => `
     <li>${item.user} : ${item.score}</li>`).join('');
   };
 
@@ -22,14 +22,14 @@ class scoreBoard {
     try {
       const data = await fetch(this.apiURL);
       const response = await data.json();
-      this.scorArray = [];
-      response.result.map((item) => this.scorArray.push(item));
-      return this.scores();
+      this.scoresData = [];
+      response.result.map((item) => this.scoresData.push(item));
+      return this.showScores();
     } catch (error) { return error; }
   };
 
   // Add a new Score
-  newScore = async ({ user, score }) => {
+  addNewScore = async ({ user, score }) => {
     try {
       const config = {
         method: 'POST',
@@ -42,10 +42,10 @@ class scoreBoard {
 
       const data = await fetch(this.apiURL, config);
       const response = await data.json();
-      this.scorArray.push(response);
+      this.scoresData.push(response);
       return this.fetchScores();
     } catch (error) { return error; }
   };
 }
 
-export default scoreBoard
+export default GameScore;
