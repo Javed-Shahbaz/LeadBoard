@@ -3,8 +3,11 @@ class scoreBoard {
     this.user = user;
     this.score = score;
   }
+  
   scorArray = [];
+
   apiURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/2mThWAsbxwLTvxawmcEU/scores';
+  
   scores = () => {
     const sList = document.getElementById('List');
     sList.innerHTML = this.scorArray.map((item) => `
@@ -21,7 +24,6 @@ class scoreBoard {
     } catch (error) { return error; }
   };
 
-  // Add a new Score
   newScore = async ({ user, score }) => {
     try {
       const config = {
@@ -40,4 +42,4 @@ class scoreBoard {
     } catch (error) { return error; }
   };
 }
-export default scoreBoard
+export default scoreBoard;
