@@ -1,21 +1,33 @@
 * {
+  list-style: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Poppins, sans-serif;
 }
 
+body {
+  height: 100%;
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgb(46, 130, 163), #b91b35);
+}
+
+
 h1 {
-  font-size: 2.5em;
-  align-items: center;
-  margin-left: 3.2em;
-  margin-bottom: 2em;
-  margin-top: 1.6em;
+  font-size: 5em;
+  line-height: 2em;
+  text-shadow: 0 0 5px #c66769, 0 0 15px #9370ae, 0 0 20px #ed9f0f, 0 0 40px #ffa500, 0 0 60px #f00;
+  color: rgb(8, 8, 87);
+  font-family: "algerian", cursive;
+  text-align: center;
+  animation: blink 15s infinite;
 }
 
 .main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.5fr 0.5fr;
+  justify-content: center;
   align-items: center;
 }
 
@@ -24,30 +36,58 @@ h1 {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  text-align: justify;
 }
 
 .scoreTitle {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 #refresh {
-  margin-left: 1rem;
-  height: 2rem;
-  width: 5rem;
-  border: 1px solid;
+  background-color: initial;
+  background-image: linear-gradient(-190deg, yellow, #ea4621);
+  border-radius: 6px;
+  box-shadow: rgba(0.8, 1, 1, 0.7) 0 4px 8px;
+  color: #fff;
+  display: inline-block;
+  font-family: Poppins, sans-serif;
+  font-size: large;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 20%;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow 0.2s;
+  margin-left: 6%;
 }
 
 h2 {
   font-size: 1.8em;
+  font-style: inherit;
+  color: #8205e1;
+  text-shadow:
+    0 0 10px #fff,
+    0 0 15px #fff,
+    0 0 25px #fff,
+    0 0 45px greenyellow,
+    0 0 85px greenyellow,
+    0 0 95px greenyellow,
+    0 0 120px greenyellow,
+    0 0 170px greenyellow;
 }
 
 .scoreList {
   border: 0.2em solid black;
   border-radius: 2px;
-  width: 48%;
+  width: 80%;
   margin-top: 1em;
 }
 
@@ -60,11 +100,18 @@ div ul li {
 }
 
 div ul li:nth-child(even) {
-  background-color: rgb(188, 184, 184);
+  background-color: rgb(183, 210, 128);
 }
 
-.bakground {
-  background-color: rgb(201, 198, 198);
+div ul li:nth-child(odd) {
+  background-color: white;
+}
+
+.addScore {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .addForm {
@@ -77,8 +124,8 @@ div ul li:nth-child(even) {
 .input {
   height: 35px;
   border: 2px solid black;
-  border-radius: 1px;
-  width: 70%;
+  border-radius: 3px;
+  width: 100%;
   padding-left: 1em;
 }
 
@@ -90,7 +137,37 @@ div ul li:nth-child(even) {
 }
 
 #add {
-  width: 5rem;
-  height: 2rem;
-  margin-left: 9.6em;
+  border-radius: 7px;
+  background-color: #0ff;
+  color: #6404b3;
+  cursor: pointer;
+  display: inline-block;
+  font-size: large;
+  font-family: Poppins, sans-serif;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  overflow: hidden;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 9;
+  border: 1px salmon;
+  transition: box-shadow 0.25s;
+}
+
+@media only screen and (max-width: 760px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .main {
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .addForm {
+    width: 80%;
+  }
 }
