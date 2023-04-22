@@ -59,6 +59,10 @@ div ul li {
   align-items: center;
 }
 
+div ul li:nth-child(even) {
+  background-color: rgb(188, 184, 184);
+}
+
 .bakground {
   background-color: rgb(201, 198, 198);
 }
@@ -88,4 +92,5 @@ div ul li {
 #add {
   width: 5rem;
   height: 2rem;
+  margin-left: 9.6em;
 }
