@@ -4,15 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border-radius: 5px;
   font-family: Poppins, sans-serif;
 }
 
 body {
   height: 100%;
-  border-radius: 5px;
   background: linear-gradient(135deg, rgb(46, 130, 163), #b91b35);
 }
-
 
 h1 {
   font-size: 5em;
@@ -63,7 +62,7 @@ h1 {
   vertical-align: top;
   white-space: nowrap;
   width: 20%;
-  z-index: 9;
+  z-index: 8;
   border: 0;
   transition: box-shadow 0.2s;
   margin-left: 6%;
@@ -86,7 +85,7 @@ h2 {
 
 .scoreList {
   border: 0.2em solid black;
-  border-radius: 2px;
+  border-radius: 0.5px;
   width: 80%;
   margin-top: 1em;
 }
@@ -137,9 +136,12 @@ div ul li:nth-child(odd) {
 }
 
 #add {
+  background-color: initial;
+  background-image: linear-gradient(-190deg, rgb(39, 218, 51), #ea4621);
+  box-shadow: rgba(0.8, 1, 1, 0.7) 0 4px 8px;
   border-radius: 7px;
   background-color: #0ff;
-  color: #6404b3;
+  color: whitesmoke;
   cursor: pointer;
   display: inline-block;
   font-size: large;
