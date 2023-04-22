@@ -1,13 +1,13 @@
-class scoreBoard {
+class Scoreboard {
   constructor(user, score) {
     this.user = user;
     this.score = score;
   }
-  
+
   scorArray = [];
 
   apiURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/2mThWAsbxwLTvxawmcEU/scores';
-  
+
   scores = () => {
     const sList = document.getElementById('List');
     sList.innerHTML = this.scorArray.map((item) => `
@@ -42,4 +42,4 @@ class scoreBoard {
     } catch (error) { return error; }
   };
 }
-export default scoreBoard;
+export default Scoreboard;

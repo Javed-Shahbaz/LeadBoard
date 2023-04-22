@@ -1,7 +1,7 @@
 import './style.css';
-import scoreBoard from './Modules/apiGame.js';
+import Scoreboard from './Modules/apiGame.js';
 
-const pScore = new scoreBoard();
+const pScore = new Scoreboard();
 const adScor = document.querySelector('.addForm');
 
 adScor.addEventListener('submit', (e) => {
