@@ -14,9 +14,9 @@ class scoreBoard {
   fScor = async () => {
     try {
       const data = await fetch(this.apiURL);
-      const response = await data.json();
+      const respons = await data.json();
       this.scorArray = [];
-      response.result.map((item) => this.scorArray.push(item));
+      respons.result.map((item) => this.scorArray.push(item));
       return this.scores();
     } catch (error) { return error; }
   };
@@ -33,12 +33,11 @@ class scoreBoard {
         body: JSON.stringify({ user, score }),
       };
 
-      const data = await fetch(this.apiURL, config);
-      const response = await data.json();
-      this.scorArray.push(response);
+      const sData = await fetch(this.apiURL, config);
+      const respons = await sData.json();
+      this.scorArray.push(respons);
       return this.fScor();
     } catch (error) { return error; }
   };
 }
-
 export default scoreBoard

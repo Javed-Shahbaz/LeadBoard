@@ -1,17 +1,17 @@
 import './style.css';
-import scoreBoard from './Modules/apiData.js';
+import scoreBoard from './Modules/apiGame.js';
 
 const pScore = new scoreBoard();
-const addScore = document.querySelector('.addForm');
+const adScor = document.querySelector('.addForm');
 
-addScore.addEventListener('submit', (e) => {
+adScor.addEventListener('submit', (e) => {
   e.preventDefault();
-  const user = addScore.name.value;
-  const score = addScore.score.value;
+  const user = adScor.name.value;
+  const score = adScor.score.value;
   pScore.newScore({ user, score });
-  addScore.reset();
+  adScor.reset();
 });
 
-const refreshBtn = document.getElementById('refresh');
-refreshBtn.addEventListener('click', pScore.fScor);
-document.addEventListener('DOMContentLoaded', pScore.showScores);
+const refBtn = document.getElementById('refresh');
+refBtn.addEventListener('click', pScore.fScor);
+document.addEventListener('DOMContentLoaded', pScore.scores);
